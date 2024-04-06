@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-CI">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="interactive_card.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <title>Interactive Card</title>
+  </head>
+  <body>
+    <main>
+      <div id="left">
+          <div id="cardfront">
+            <div class="img">
+              <img alt="frontcard" src="images/bg-card-front.png" />
+            </div>
+            <img class="logo" alt="logo" src="images/card-logo.svg" />
+            <div class="cinf">
+              <div id="cardnumber">0000 0000 0000 0000</div>
+              <!-- <input type="text" id="cardnumber" value="0000 0000 0000 0000" /> -->
+              <span id="l">JANE APPLESEED</span>
+              <!-- <input type="text" id="l" value="JANE APPLESEED"> -->
+              <span id="r">00/00</span>
+              <!-- <input type="text" id="r" value="00/00"> -->
+            </div>
+          </div>
+          <div id="cardback">
+            <div class="img">
+              <img alt="backcard" src="images/bg-card-back.png" />
+            </div>
+            <div>000</div>
+          </div> 
+      </div>
+
+      <div id="right">
+        <form action="" method="POST" >
+          <div>
+            <label for="cname">CARDHOLDER NAME</label>
+            <input type="text" id="cname" name="cname" placeholder="e.g. Jane Appleseed" required />
+            <div class="alert">alert</div>
+          </div>
+          <div>
+            <label for="number">CARD NUMBER</label>
+            <input type="text" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000" required />
+            <div class="alert">alert</div>
+          </div>
+          <div>
+            <div class="l">
+              <label>EXP. DATE (MM/YY)</label>
+              <div>
+                <input type="number" min="01" max="12" name="month" placeholder="MM" id="month" required />
+                <input type="number" min="01" max="50" name="year" placeholder="YY" id="year" required />
+              </div>
+              <div class="alert">alert</div>
+            </div>
+            <div class="r">
+              <label for="cvc">CVC</label>
+              <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" required />
+              <div class="alert">alert</div>
+            </div>
+          </div>
+          <button id="submitBtn" type="submit">Confirm</button>
+        </form>
+        <div id="thanks">
+          <img alt="icon" src="images/icon-complete.svg" />
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>   
+    <script src="interactive_card.js"></script>
+  </body>
+</html>
